@@ -1,0 +1,41 @@
+{
+  "name": "outerspatial-sqlite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postinstall": "cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run build-release || echo 'Better-sqlite3 build failed, but continuing...'",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "@aws-sdk/client-s3": "^3.716.0",
+    "@vercel/functions": "^1.4.2",
+    "better-sqlite3": "^12.2.0",
+    "graphql": "^16.10.0",
+    "graphql-request": "^7.1.2",
+    "lodash": "^4.17.21",
+    "mkdirp": "^3.0.1",
+    "next": "15.1.7",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sqlstring-sqlite": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "typescript": "^5",
+    "vitest": "^2.1.8"
+  }
+}
