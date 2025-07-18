@@ -6,7 +6,7 @@
   "crons": [
     {
       "path": "/app/cron/sqlite-export",
-      "schedule": "* */1 * * *"
+      "schedule": "*/10 * * * *"
     }
   ],
   "headers": [
