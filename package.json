@@ -2,15 +2,12 @@
   "name": "outerspatial-sqlite",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.11.1",
   "engines": {
-    "node": ">=22.0.0",
-    "pnpm": ">=9"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "dev": "next dev  --turbopack",
     "build": "next build",
-    "postinstall": "cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run build-release || echo 'Better-sqlite3 build failed, but continuing...'",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
