@@ -1,24 +1,22 @@
 {
   "framework": "nextjs",
   "buildCommand": "pnpm build",
-  "devCommand": "pnpm dev",
+  "outputDirectory": ".next",
   "installCommand": "pnpm install",
-  "regions": ["iad1"],
-  "functions": {
-    "app/api/export/sqlite/all/route.ts": {
-      "maxDuration": 300
-    },
-    "app/api/export/sqlite/one/route.ts": {
-      "maxDuration": 300
-    },
-    "app/cron/sqlite-export/route.ts": {
-      "maxDuration": 300
-    }
-  },
   "crons": [
     {
       "path": "/app/cron/sqlite-export",
       "schedule": "0 2 * * *"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, PATCH, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "*" }
+      ]
     }
   ]
 }
