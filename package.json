@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postinstall": "cd node_modules/.pnpm/better-sqlite3@*/node_modules/better-sqlite3 && npm run build-release || echo 'Better-sqlite3 build failed, but continuing...'",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
